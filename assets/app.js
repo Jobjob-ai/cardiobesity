@@ -123,7 +123,13 @@ safe(function(){
   ' vec3 c=mix(base,teal,smoothstep(.3,.8,f)*.7);'+
   ' float glow=pow(smoothstep(.55,.95,fbm(uv*asp*1.1+vec2(-t*.02,t*.015)+3.)),2.);'+
   ' c+=gold*glow*.16;'+
-  ' float fade=smoothstep(.0,.75,uv.y)*(.35+.65*smoothstep(1.,.15,uv.x));'+ /* quieter under the text (right side in RTL) */
+  ' float fade=smoothstep(.0,.75,uv.y)*(.35+.65*(1.-smoothstep(.15,1.,uv.x)));'+ /* quieter under the text (right side in RTL) */
+  ' float wv=fbm(vec2(uv.x*1.6,t*.03))*.5+sin(uv.x*3.2+t*.07)*.06;'+
+  ' float ray=.55+.45*n(vec2((uv.x+wv*.35)*asp.x*16.,t*.06));'+
+  ' float ht=smoothstep(.2,1.,uv.y+wv*.25);float cur=pow(ht,1.7)*ray*smoothstep(0.,.3,uv.y);'+
+  ' float side=.25+.75*(1.-smoothstep(.1,.95,uv.x));'+ /* curtains live on the left, away from the RTL text */
+  ' vec3 ac=mix(teal*1.6,gold,smoothstep(.05,.5,cur));ac=mix(ac,silver,smoothstep(.75,1.,cur)*.5);'+
+  ' c+=ac*cur*side*.55;'+
   ' c=mix(c,silver,line*.30*fade);'+
   ' c=mix(c,gold,line*major*.75*fade);'+
   ' float mg=exp(-dot(uv*asp-m.xy*asp,uv*asp-m.xy*asp)*14.)*m.z;c+=gold*mg*.10;'+
