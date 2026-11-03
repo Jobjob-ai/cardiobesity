@@ -132,6 +132,13 @@ h3{margin:0}
 .ds .tip+.btnrow{margin-top:8px}
 .stuck{margin:18px 0 0;color:var(--muted);font-size:15.5px}
 .stuck a{white-space:nowrap}
+.ds .shot{flex:none;margin:0;width:260px}
+.ds .shot.tall{width:170px}
+.ds .shot .zoom{display:block;border-radius:var(--r2);overflow:hidden;border:1px solid rgba(242,193,78,.35);background:#000;cursor:zoom-in;transition:border-color .2s,box-shadow .2s}
+.ds .shot .zoom:hover{border-color:var(--gold);box-shadow:var(--glow)}
+.ds .shot img{display:block;width:100%;height:auto}
+.ds .shot figcaption{text-align:center;color:var(--muted);font-size:13.5px;margin-top:6px}
+@media(max-width:700px){.ds>li{flex-wrap:wrap}.ds>li>div{flex:1 1 calc(100% - 60px)}.ds .shot,.ds .shot.tall{width:auto;flex:1 1 100%;margin-inline-start:52px}.ds .shot .zoom{max-width:300px}.ds .shot.tall .zoom{max-width:165px}.ds .shot figcaption{text-align:start}}
 
 /* summary */
 .sum{background:radial-gradient(520px 240px at 100% 0%,rgba(242,193,78,.14),transparent 70%),var(--glass);border:1px solid rgba(242,193,78,.45);border-radius:var(--r);padding:26px 24px}
@@ -225,20 +232,20 @@ footer .mark img{width:130px;height:auto;display:block}
 <p class='lead'>פותחים את OpenEvidence בחלון נוסף, ועוברים צעד אחר צעד. כל מה שצריך להעתיק נמצא כאן בלחיצה.</p>
 <ol class='ds'>
 <li><i>1</i><div><h3>נכנסים ל-OpenEvidence</h3><p>מתחברים לחשבון, או נרשמים אם עוד אין.</p>
-<div class='btnrow'><a class='btn' href='https://www.openevidence.com/' target='_blank' rel='noopener'>לפתיחת OpenEvidence</a></div></div></li>
-<li><i>2</i><div><h3>פותחים את רשימת ה-Dotflows</h3><p>בתפריט הצד לוחצים <b>Tools</b>, ואז <b>Dotflows</b>.</p></div></li>
+<div class='btnrow'><a class='btn' href='https://www.openevidence.com/' target='_blank' rel='noopener'>לפתיחת OpenEvidence</a></div></div><figure class='shot tall'><a class='zoom' href='assets/steps/step1.webp' aria-label='הגדלת תמונה: שלב 1: נכנסים לאתר openevidence.com ומתחברים לחשבון'><img src='assets/steps/step1.webp' alt='שלב 1: נכנסים לאתר openevidence.com ומתחברים לחשבון' width='432' height='1227' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
+<li><i>2</i><div><h3>פותחים את רשימת ה-Dotflows</h3><p>בתפריט הצד לוחצים <b>Tools</b>, ואז <b>Dotflows</b>.</p></div><figure class='shot tall'><a class='zoom' href='assets/steps/step2.webp' aria-label='הגדלת תמונה: שלב 2: בתפריט הצד לוחצים על Tools ואז על Dotflows'><img src='assets/steps/step2.webp' alt='שלב 2: בתפריט הצד לוחצים על Tools ואז על Dotflows' width='416' height='1227' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
 <li><i>3</i><div><h3>מחפשים את הכלי</h3><p>לוחצים <b>Community Dotflows</b>, מחפשים <b>Obesity</b> ובוחרים את <bdi dir='ltr' class='nm'>.cardiobesity</bdi> מהרשימה. לא מוצאים? מעתיקים את השם ומדביקים בחיפוש.</p>
-<div class='btnrow'><button class='cchip' type='button' data-copy='.cardiobesity' aria-label='העתקת השם cardiobesity'><bdi dir='ltr'>.cardiobesity</bdi><svg class='ci' viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='12' height='12' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg><span class='cl'>העתקה</span></button></div></div></li>
-<li><i>4</i><div><h3>שומרים אותו</h3><p>לוחצים <b>Add to my dotflows</b>. עושים את זה פעם אחת בלבד.</p></div></li>
-<li><i>5</i><div><h3>פותחים שיחה חדשה</h3><p>לוחצים <b>New Conversation</b>.</p></div></li>
-<li><i>6</i><div><h3>מפעילים את הכלי</h3><p>בתיבת השאלה לוחצים על <b>+</b>, בוחרים <b>Dotflows</b> ואז את <bdi dir='ltr' class='nm'>.cardiobesity</bdi> מהרשימה.</p></div></li>
+<div class='btnrow'><button class='cchip' type='button' data-copy='.cardiobesity' aria-label='העתקת השם cardiobesity'><bdi dir='ltr'>.cardiobesity</bdi><svg class='ci' viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='12' height='12' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg><span class='cl'>העתקה</span></button></div></div><figure class='shot tall'><a class='zoom' href='assets/steps/step3.webp' aria-label='הגדלת תמונה: שלב 3: לוחצים על Community Dotflows, מחפשים Obesity ובוחרים את cardiobesity'><img src='assets/steps/step3.webp' alt='שלב 3: לוחצים על Community Dotflows, מחפשים Obesity ובוחרים את cardiobesity' width='433' height='1227' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
+<li><i>4</i><div><h3>שומרים אותו</h3><p>לוחצים <b>Add to my dotflows</b>. עושים את זה פעם אחת בלבד.</p></div><figure class='shot sq'><a class='zoom' href='assets/steps/step4.webp' aria-label='הגדלת תמונה: שלב 4: לוחצים על Add to my dotflows כדי לשמור את הכלי'><img src='assets/steps/step4.webp' alt='שלב 4: לוחצים על Add to my dotflows כדי לשמור את הכלי' width='658' height='640' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
+<li><i>5</i><div><h3>פותחים שיחה חדשה</h3><p>לוחצים <b>New Conversation</b>.</p></div><figure class='shot sq'><a class='zoom' href='assets/steps/step5.webp' aria-label='הגדלת תמונה: שלב 5: לוחצים על New Conversation כדי לפתוח שיחה חדשה'><img src='assets/steps/step5.webp' alt='שלב 5: לוחצים על New Conversation כדי לפתוח שיחה חדשה' width='575' height='640' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
+<li><i>6</i><div><h3>מפעילים את הכלי</h3><p>בתיבת השאלה לוחצים על <b>+</b>, בוחרים <b>Dotflows</b> ואז את <bdi dir='ltr' class='nm'>.cardiobesity</bdi> מהרשימה.</p></div><figure class='shot sq'><a class='zoom' href='assets/steps/step6.webp' aria-label='הגדלת תמונה: שלב 6: לוחצים על סימן הפלוס, בוחרים Dotflows ואז cardiobesity'><img src='assets/steps/step6.webp' alt='שלב 6: לוחצים על סימן הפלוס, בוחרים Dotflows ואז cardiobesity' width='540' height='640' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
 <li><i>7</i><div><h3>מדביקים את סיפור המקרה ושולחים</h3><p>מעתיקים את <a href='#case'>המקרה של אייל</a>, מדביקים בתיבה ולוחצים שליחה. התשובה מגיעה תוך כדקה.</p>
 <div class='btnrow'><button class='btn' id='copy' type='button'>העתקת סיפור המקרה</button></div>
 <div id='copyok' role='status' aria-live='polite'></div>
 <p class='tip'>הכלי ביקש מידע חסר? מעתיקים ומדביקים באותה שיחה:</p>
-<div class='btnrow'><button class='cchip txt' type='button' data-copy='היקף צוואר: 43.5 ס"מ | AST: 38 U/L | ALT: 52 U/L | טסיות: 210,000 / µL | גלוקוז בצום: 108 mg/dL | HDL: 38 mg/dL | eGFR: 88 mL/min/1.73m² | UACR: 45 mg/g' aria-label='העתקת המידע המשלים'><svg class='ci' viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='12' height='12' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg><span class='cl'>העתקת המידע המשלים</span></button></div></div></li>
+<div class='btnrow'><button class='cchip txt' type='button' data-copy='היקף צוואר: 43.5 ס"מ | AST: 38 U/L | ALT: 52 U/L | טסיות: 210,000 / µL | גלוקוז בצום: 108 mg/dL | HDL: 38 mg/dL | eGFR: 88 mL/min/1.73m² | UACR: 45 mg/g' aria-label='העתקת המידע המשלים'><svg class='ci' viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='12' height='12' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg><span class='cl'>העתקת המידע המשלים</span></button></div></div><figure class='shot sq'><a class='zoom' href='assets/steps/step7.webp' aria-label='הגדלת תמונה: שלב 7: מדביקים את סיפור המקרה כולל אנמנזה, בדיקות ומעבדה'><img src='assets/steps/step7.webp' alt='שלב 7: מדביקים את סיפור המקרה כולל אנמנזה, בדיקות ומעבדה' width='695' height='640' loading='lazy'></a><figcaption>לחצו להגדלה</figcaption></figure></li>
 </ol>
-<p class='stuck'>נתקעתם? צילומי מסך: <a class='zoom' href='assets/steps/steps-1-3.webp' data-alt='צילומי מסך של שלבים 1 עד 3'>שלבים 1 עד 3</a> · <a class='zoom' href='assets/steps/steps-4-7.webp' data-alt='צילומי מסך של שלבים 4 עד 7'>שלבים 4 עד 7</a> · <a href='https://www.openevidence.com/ask/95f6c55f-d447-4358-8875-361eacfb0599' target='_blank' rel='noopener'>שיחה לדוגמה</a></p>
+<p class='stuck'>רוצים לראות איך זה נראה בסוף? <a href='https://www.openevidence.com/ask/95f6c55f-d447-4358-8875-361eacfb0599' target='_blank' rel='noopener'>לשיחה לדוגמה</a></p>
 </section>
 
 <section id='what' style='padding-top:10px'>
@@ -335,7 +342,7 @@ HbA1c: 6.1%
 LDL: 128 mg/dL
 טריגליצרידים: 224 mg/dL</script>
 
-<script src='assets/app.js?v=20261103b' defer></script>
+<script src='assets/app.js?v=20261103c' defer></script>
 <script defer src='/_vercel/insights/script.js'></script>
 </body>
 </html>
