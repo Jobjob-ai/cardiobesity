@@ -39,7 +39,8 @@ safe(function(){
   if(!lb.showModal){return}
   var img=$('img',lb),opener=null,pushed=false;
   function open(a){
-    img.src=a.getAttribute('href');img.alt=$('img',a).alt;opener=a;
+    var th=$('img',a);
+    img.src=a.getAttribute('href');img.alt=a.getAttribute('data-alt')||(th?th.alt:'');opener=a;
     lb.showModal();
     try{history.pushState({lb:1},'');pushed=true}catch(e){pushed=false}
     var x=$('#lbx');if(x)x.focus();
