@@ -32,7 +32,10 @@ a{color:var(--gold)}
 
 /* hero */
 .hero{position:relative;overflow:hidden;min-height:min(82vh,680px);display:flex;align-items:flex-end;background:radial-gradient(900px 480px at 85% 0%,rgba(242,193,78,.14),transparent),radial-gradient(800px 500px at 0% 20%,rgba(23,41,56,.9),transparent),var(--bg)}
-.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.hero-bg{position:absolute;inset:0;pointer-events:none;background:radial-gradient(620px 380px at 18% 18%,rgba(242,193,78,.09),transparent 70%),linear-gradient(180deg,#07142a 0%,var(--bg) 100%)}
+.hero-bg::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(200,205,214,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(200,205,214,.045) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse 70% 80% at 25% 15%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 70% 80% at 25% 15%,#000 0%,transparent 75%)}
+.hero-bg::after{content:'';position:absolute;left:8%;top:-10%;width:46vw;height:46vw;max-width:560px;max-height:560px;border-radius:50%;background:radial-gradient(circle,rgba(242,193,78,.10),transparent 65%);animation:breathe 14s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,10,24,0) 0%,rgba(4,10,24,.35) 55%,rgba(4,10,24,.62) 100%),linear-gradient(180deg,rgba(4,10,24,.1) 0%,rgba(4,10,24,.5) 62%,var(--bg) 100%);pointer-events:none}
 .hero .in{position:relative;z-index:2;width:100%;max-width:1000px;margin:0 auto;padding:96px 24px 56px}
 .brand{display:block;width:clamp(150px,22vw,220px);height:auto;margin:0 0 22px}
@@ -217,8 +220,8 @@ footer .mark{display:flex;align-items:center;gap:10px;color:var(--silver);font-w
 footer .mark img{width:130px;height:auto;display:block}
 @media(max-width:380px){.cchip{font-size:20px;gap:8px;padding:8px 12px}.cchip .cl{font-size:15px}}
 @media(max-width:600px){body{font-size:16px}.hero .in{padding-top:84px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.bar,#toast,.shot .zoom,.dc{transition:none}.hero .in>*,.ecg .pulse{animation:none;opacity:1;stroke-dashoffset:0}}
-@media print{body{background:#fff;color:#000}.hero canvas,#top,#progress,.cta,.bar{display:none}.hero::after{display:none}.hero{min-height:0;background:#fff}.ecg{display:none}.hero .in{padding:20px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.bar,#toast,.shot .zoom,.dc{transition:none}.hero .in>*,.ecg .pulse,.hero-bg::after{animation:none;opacity:1;stroke-dashoffset:0}}
+@media print{body{background:#fff;color:#000}.hero-bg,#top,#progress,.cta,.bar{display:none}.hero::after{display:none}.hero{min-height:0;background:#fff}.ecg{display:none}.hero .in{padding:20px 0}}
 </style>
 </head>
 <body>
@@ -227,12 +230,12 @@ footer .mark img{width:130px;height:auto;display:block}
 <div id='bar' class='bar'><div class='bin'><span class='bt'>AI בפעולה</span><a class='btn sm' href='https://www.openevidence.com/' target='_blank' rel='noopener'>מעבר ל-OpenEvidence</a></div></div>
 
 <header class='hero'>
-<canvas id='fx' aria-hidden='true'></canvas>
+<div class='hero-bg' aria-hidden='true'></div>
 <div class='in'>
 <img class='brand' src='assets/medacademy-wordmark.webp' alt='MedAcademy.AI' width='720' height='360'>
 <h1>AI בפעולה<br><span class='g'>במרפאה וביום יום</span></h1>
 <svg class='ecg' viewBox='0 0 600 60' aria-hidden='true' focusable='false'><path class='base' d='M0 32H600'/><path class='pulse' pathLength='1' d='M0 32H190l10-7 10 7h30l9 5 13-32 15 54 11-27h18l13-11 14 11H600'/></svg>
-<p class='sub'>איך מגיעים לכלי <bdi dir='ltr'>.cardiobesity</bdi> ב-OpenEvidence, צעד אחר צעד.</p>
+<p class='sub'>איך מגיעים לכלי מההרצאה ב-OpenEvidence, צעד אחר צעד.</p>
 <div class='cta'>
 <a class='btn' href='#steps'>איך מגיעים ל-Dotflow</a>
 <a class='btn alt' href='#case'>המקרה של אייל</a>
@@ -431,7 +434,7 @@ HbA1c: 6.1%
 LDL: 128 mg/dL
 טריגליצרידים: 224 mg/dL</script>
 
-<script src='assets/app.js?v=20261031b' defer></script>
+<script src='assets/app.js?v=20261103' defer></script>
 <script defer src='/_vercel/insights/script.js'></script>
 </body>
 </html>
