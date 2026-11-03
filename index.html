@@ -135,6 +135,44 @@ h3{margin:0}
 .extra{margin-top:18px;background:var(--panel);border:1px dashed var(--gold);border-radius:var(--r);padding:18px 20px}
 .extra p{margin:0 0 12px}
 
+/* rules */
+.rules{margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:0 20px}
+.rules summary{cursor:pointer;font-weight:700;font-size:18px;padding:14px 0;color:var(--gold);min-height:44px}
+.rules ol{margin:0 0 16px;padding:0 22px 0 0;display:grid;gap:10px}
+.rules li b{display:block}.rules li span{color:var(--muted);font-size:16px}
+
+/* case */
+.gal{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,46%);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin:0 -2px}
+.gi{margin:0;scroll-snap-align:start}
+.gi .zoom,.risk .zoom,.shotw{display:block;border-radius:var(--r2);overflow:hidden;border:1px solid rgba(242,193,78,.35);background:#000;cursor:zoom-in;transition:border-color .2s,box-shadow .2s}
+.gi .zoom:hover,.risk .zoom:hover,.shotw:hover{border-color:var(--gold);box-shadow:var(--glow)}
+.gi img,.risk img,.shotw img{display:block;width:100%;height:auto}
+.gi figcaption,.risk figcaption{color:var(--silver);font-size:15.5px;margin-top:8px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:18px 0 0;padding:0}
+.facts li{border:1px solid var(--line);background:var(--panel2);border-radius:var(--pill);padding:3px 14px;font-size:15.5px}
+.risk{margin:22px 0 0}
+@media(max-width:700px){.gal{grid-auto-columns:84%}}
+
+/* demo steps */
+.ds{list-style:none;margin:0;padding:0;display:grid;gap:16px;position:relative}
+.ds::before{content:'';position:absolute;right:40px;top:40px;bottom:40px;width:2px;background:linear-gradient(180deg,var(--gold),rgba(242,193,78,.15))}
+.ds>li{display:flex;gap:16px;align-items:flex-start;background:var(--glass);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative}
+.ds>li>i{flex:none;font-style:normal;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:20px;box-shadow:0 0 0 5px #111624,0 0 22px rgba(242,193,78,.4)}
+.ds>li>div{min-width:0;flex:1}
+.ds h3{font-size:21px;margin:0 0 4px}.ds p{margin:0 0 12px;color:var(--muted)}
+.ds .shotw{margin-top:4px;max-width:720px}
+.ds .pair{display:grid;gap:12px}
+.ds .chk{margin:14px 0 0;color:var(--text);border-right:3px solid var(--gold);padding-right:12px}
+.ds .extra{margin:0 0 14px}
+.sbt{width:100%;max-width:560px;border-collapse:collapse;font-size:16px;margin:4px 0 10px}
+.sbt th,.sbt td{text-align:right;padding:7px 10px;border-bottom:1px solid var(--line)}
+.sbt thead th{color:var(--muted);font-weight:500;font-size:14.5px}
+.sbt tbody th{font-weight:600}.sbt td:last-child{direction:ltr;unicode-bidi:isolate;text-align:center;font-weight:700;color:var(--gold);width:64px}
+.sbt tr.miss td,.sbt tr.miss th{color:var(--red)}
+.score{color:var(--text)!important}.score b{color:var(--gold);font-size:20px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:600px){.ds>li{padding:16px;gap:12px}.ds>li>i{width:34px;height:34px;font-size:17px}.ds::before{right:33px}.sbt{font-size:14.5px}.sbt th,.sbt td{padding:6px}}
+
 /* go */
 .go{text-align:center;background:radial-gradient(520px 260px at 50% 0%,rgba(242,193,78,.2),transparent 70%),var(--glass);border:1px solid rgba(242,193,78,.45);border-radius:var(--r);padding:34px 22px}
 .go h2{margin-bottom:6px}.go p.lead{margin:0 auto 24px}
@@ -194,11 +232,12 @@ footer .mark img{width:130px;height:auto;display:block}
 <img class='brand' src='assets/medacademy-wordmark.webp' alt='MedAcademy.AI' width='720' height='360'>
 <h1>AI בפעולה<br><span class='g'>במרפאה וביום יום</span></h1>
 <svg class='ecg' viewBox='0 0 600 60' aria-hidden='true' focusable='false'><path class='base' d='M0 32H600'/><path class='pulse' pathLength='1' d='M0 32H190l10-7 10 7h30l9 5 13-32 15 54 11-27h18l13-11 14 11H600'/></svg>
-<p class='sub'>איך מגיעים לכלי מההרצאה, בתמונות.</p>
+<p class='sub'>איך מגיעים לכלי <bdi dir='ltr'>.cardiobesity</bdi> ב-OpenEvidence, צעד אחר צעד.</p>
 <div class='cta'>
-<a class='btn' href='#steps'>מתחילים</a>
+<a class='btn' href='#steps'>איך מגיעים ל-Dotflow</a>
+<a class='btn alt' href='#case'>המקרה של אייל</a>
 </div>
-<div class='byline'>ד״ר רועי שליט<small>מנהל תחום AI וחדשנות, האגודה האנדוקרינית הישראלית</small></div>
+<div class='byline'>ד״ר רועי שליט<small>מנהל מכון סוכרת נתניה · מנהל תחום AI וחדשנות, האגודה האנדוקרינית הישראלית</small></div>
 </div>
 </header>
 
@@ -210,6 +249,16 @@ footer .mark img{width:130px;height:auto;display:block}
 <div class='alert'><i aria-hidden='true'>!</i><div><b>לא מכניסים מידע מזהה</b><span>בלי שם, ת״ז, טלפון או כתובת.</span></div></div>
 <div class='alert'><i aria-hidden='true'>!</i><div><b>AI עלול לטעות</b><span>בודקים כל תוצאה מול התיק והמקור.</span></div></div>
 </div>
+<details class='rules'>
+<summary>5 החוקים לעבודה בטוחה עם AI</summary>
+<ol>
+<li><b>אימות מוחלט <bdi dir='ltr'>(Zero Trust)</bdi></b><span>כל פלט הוא טיוטה. נתון קריטי, כמו מינון או קוד, מאמתים במקור מוסמך. ציטוט שלא נפתח ונבדק אינו מקור.</span></li>
+<li><b>הקשר מפורש <bdi dir='ltr'>(Explicit Context)</bdi></b><span>תוחמים את המודל להקשר הקליני: תפקיד, משימה, אילוץ.</span></li>
+<li><b>היגיינת מידע <bdi dir='ltr'>(Privacy First)</bdi></b><span>מודל ציבורי הוא מרחב ציבורי. לא מקלידים פרטים מזהים (מבחן המעלית), ומעדיפים מודלים ארגוניים.</span></li>
+<li><b>תיחום גבולות <bdi dir='ltr'>(Scope Limitation)</bdi></b><span>LLM לעיבוד, לא להחלטות. רמזור: ירוק לסיכום, צהוב לאבחנה מבדלת, אדום לחישוב ו-Staging.</span></li>
+<li><b>בדיקת הטיות <bdi dir='ltr'>(Bias Check)</bdi></b><span>המודל משקף הטיות. מסתירים מגדר ומוצא בשלב הראשון, ודורשים לחשוף את ההיגיון: ״למה?״</span></li>
+</ol>
+</details>
 </section>
 
 <section id='steps'>
@@ -222,7 +271,7 @@ footer .mark img{width:130px;height:auto;display:block}
 <div class='ioarrow' aria-hidden='true'>←</div>
 <div class='iobox out'><b>מקבלים</b><ul><li>סיכום <bdi dir='ltr'>SOAP</bdi> לתיק</li><li>ציונים, ומה חסר</li><li>הסבר פשוט למטופל</li></ul></div>
 </div>
-<p class='src'>Dotflow קהילתי, לא כלי רשמי של OpenEvidence.</p>
+<p class='src'>Dotflow קהילתי, לא כלי רשמי של OpenEvidence. <a href='https://www.openevidence.com/blog/model-family' target='_blank' rel='noopener'>למה OpenEvidence?</a></p>
 </div>
 
 <div class='flow'>
@@ -268,17 +317,58 @@ footer .mark img{width:130px;height:auto;display:block}
 </div>
 </section>
 
+<section id='case'>
+<h2>המקרה של אייל</h2>
+<p class='lead'>מקרה בדיוני שנבנה להרצאה. אייל הגיע רק לחדש מרשמים, ובתוך ביקור שגרתי התגלו השמנה בטנית, גורמי סיכון קרדיומטבוליים וחשד לדום נשימה בשינה.</p>
+<div class='gal' role='list'>
+<figure class='gi' role='listitem'><a class='zoom' href='assets/case/eyal1.webp' aria-label='הגדלת תמונה: אייל, בן 53: באתי רק לחדש מרשמים'><img src='assets/case/eyal1.webp' alt='אייל, בן 53, נשוי ואב לשלושה, מנהל תפעול: דוקטור, באתי רק לחדש מרשמים' width='1200' height='800' loading='lazy'></a><figcaption>״באתי רק לחדש מרשמים״</figcaption></figure>
+<figure class='gi' role='listitem'><a class='zoom' href='assets/case/eyal2.webp' aria-label='הגדלת תמונה: מדדים ובדיקות דם אחרונות'><img src='assets/case/eyal2.webp' alt='מדדים ובדיקות: 108 ק״ג, 176 ס״מ, BMI 34.9, מותניים 116 ס״מ, לחץ דם 146/92, HbA1c 6.1%, LDL 128, טריגליצרידים 224' width='1200' height='675' loading='lazy'></a><figcaption>המדדים והבדיקות</figcaption></figure>
+<figure class='gi' role='listitem'><a class='zoom' href='assets/case/eyal3.webp' aria-label='הגדלת תמונה: אני יודע שאני שמן, אין לי כוח רצון'><img src='assets/case/eyal3.webp' alt='ניסיונות קודמים: צום לסירוגין, דיאטות, הפחתת פחמימות. השמנה היא מחלה כרונית ומורכבת, לא עניין של כוח רצון' width='1200' height='675' loading='lazy'></a><figcaption>השמנה כמחלה כרונית</figcaption></figure>
+<figure class='gi' role='listitem'><a class='zoom' href='assets/case/eyal4.webp' aria-label='הגדלת תמונה: תגיד אייל, איך אתה ישן?'><img src='assets/case/eyal4.webp' alt='אנמנזת שינה: נחירות חזקות, הפסקות נשימה נצפות, נוקטוריה ועייפות בבוקר. להירדם בקלות זה לא בהכרח לישון טוב' width='1200' height='675' loading='lazy'></a><figcaption>״איך אתה ישן?״</figcaption></figure>
+</div>
+<ul class='facts' aria-label='נתוני המקרה'>
+<li>בן 53</li><li><bdi dir='ltr'>BMI 34.9</bdi></li><li>מותניים 116 ס״מ</li><li>ל״ד <bdi dir='ltr'>146/92</bdi></li><li><bdi dir='ltr'>HbA1c 6.1%</bdi></li><li><bdi dir='ltr'>LDL 128 mg/dL</bdi></li><li>טריגליצרידים <bdi dir='ltr'>224 mg/dL</bdi></li>
+</ul>
+<figure class='risk'><a class='zoom' href='assets/case/risk.webp' aria-label='הגדלת תמונה: ריבוד סיכונים לאייל'><img src='assets/case/risk.webp' alt='ריבוד סיכונים לאייל: STOP-Bang, FIB-4, SCORE2 או PREVENT, KDIGO, HbA1c ופרופיל ליפידים. לא מספיק לזכור, צריך לחשב, לרבד ולשלב' width='1400' height='685' loading='lazy'></a><figcaption>שישה מחשבונים בביקור אחד, ובזמן קצר. כאן ה-Dotflow עוזר.</figcaption></figure>
+</section>
+
 <section id='demo'>
-<h2>מה מקבלים</h2>
-<ol class='demo'>
-<li class='dc'><b>1. ציונים</b><p>למשל <bdi dir='ltr'>STOP-Bang</bdi></p></li>
-<li class='dc'><b>2. מה חסר</b><p>היא מבקשת, ולא ממציאה</p></li>
-<li class='dc'><b>3. תוצר</b><p><bdi dir='ltr'>SOAP</bdi> והסבר למטופל</p></li>
-</ol>
+<h2>ההדגמה: מהקלט ועד התוצר</h2>
+<p class='lead'>מה קורה אחרי שמדביקים את המקרה של אייל ובוחרים <bdi dir='ltr'>.cardiobesity</bdi>.</p>
+<ol class='ds'>
+<li><i>1</i><div><h3>הקלט</h3><p>סיכום תיק מותמם: אנמנזה, תסמינים, מדדים ומעבדה. בוחרים את ה-Dotflow, והמערכת מחפשת ראיות ומריצה מחשבונים.</p>
+<a class='zoom shotw' href='assets/demo/d1-input.webp' aria-label='הגדלת תמונה: הקלט'><img src='assets/demo/d1-input.webp' alt='הקלט ב-OpenEvidence: סיכום תיק מותמם של אייל' width='1300' height='560' loading='lazy'></a></div></li>
+<li><i>2</i><div><h3>חישוב ציונים</h3><p>המערכת מחשבת <bdi dir='ltr'>STOP-Bang</bdi> מתוך התיק:</p>
+<table class='sbt'><caption class='vh'>STOP-Bang של אייל</caption>
+<thead><tr><th scope='col'>סעיף</th><th scope='col'>אצל אייל</th><th scope='col'>ניקוד</th></tr></thead>
+<tbody>
+<tr><th scope='row'><bdi dir='ltr'>S</bdi> נחירות</th><td>נחירות חזקות</td><td>+1</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>T</bdi> עייפות</th><td>עייפות בבוקר</td><td>+1</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>O</bdi> הפסקות נשימה</th><td>נצפו על ידי בת הזוג</td><td>+1</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>P</bdi> לחץ דם</th><td>יתר לחץ דם <bdi dir='ltr'>(146/92)</bdi></td><td>+1</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>B</bdi> BMI מעל 35</th><td><bdi dir='ltr'>BMI 34.9</bdi></td><td>0</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>A</bdi> גיל מעל 50</th><td>בן 53</td><td>+1</td></tr>
+<tr class='miss'><th scope='row'><bdi dir='ltr'>N</bdi> צוואר מעל 40 ס״מ</th><td>לא נמדד</td><td>?</td></tr>
+<tr><th scope='row'><bdi dir='ltr'>G</bdi> מין</th><td>זכר</td><td>+1</td></tr>
+</tbody></table>
+<p class='score'>ציון חלקי: <b><bdi dir='ltr'>6/8</bdi></b>, היקף צוואר חסר. סיכון גבוה ל-OSA עוד לפני השלמת הנתון.</p></div></li>
+<li><i>3</i><div><h3>חסר מידע? המערכת עוצרת ומבקשת</h3><p>לא ממציאה ערכים. מפרטת מה חסר ולמה: היקף צוואר ל-<bdi dir='ltr'>STOP-Bang</bdi>, תפקודי כבד ל-<bdi dir='ltr'>FIB-4</bdi>, <bdi dir='ltr'>eGFR</bdi> ו-<bdi dir='ltr'>UACR</bdi> ל-<bdi dir='ltr'>KDIGO</bdi>, וממליצה על בדיקת שינה <bdi dir='ltr'>(HSAT/PSG)</bdi>.</p>
+<a class='zoom shotw' href='assets/demo/d2-missing.webp' aria-label='הגדלת תמונה: מידע חסר'><img src='assets/demo/d2-missing.webp' alt='המערכת מבקשת מידע נוסף: היקף צוואר, תפקודי כבד, eGFR ו-UACR' width='1390' height='574' loading='lazy'></a></div></li>
+<li><i>4</i><div><h3>התוצר: שני מסמכים, בתוך כדקה</h3><p>רשומה קלינית <bdi dir='ltr'>SOAP</bdi> להדבקה בתיק, והמלצות למטופל באותה תמונה, בשפה פשוטה.</p>
+<div class='pair'>
+<a class='zoom shotw' href='assets/demo/d3-soap.webp' aria-label='הגדלת תמונה: רשומת SOAP'><img src='assets/demo/d3-soap.webp' alt='רשומה קלינית SOAP: נתונים, ציונים ורשימת בעיות' width='1430' height='696' loading='lazy'></a>
+<a class='zoom shotw' href='assets/demo/d3-patient.webp' aria-label='הגדלת תמונה: המלצות למטופל'><img src='assets/demo/d3-patient.webp' alt='המלצות למטופל בשפה פשוטה' width='1439' height='474' loading='lazy'></a>
+</div>
+<p class='chk'><b>לפני שימוש בודקים:</b> כל ערך מול התיק, כל ציון מול המחשבון, כל המלצה מול המקור.</p></div></li>
+<li><i>5</i><div><h3>מוסיפים את המידע החסר</h3><p>מדביקים את הנתונים המשלימים באותה שיחה, והמערכת מחשבת מחדש. למשל <bdi dir='ltr'>FIB-4 = 1.33</bdi>: תחום ביניים, שמצריך בירור נוסף.</p>
 <div class='extra'>
-<p>היא ביקשה מידע חסר? מדביקים:</p>
+<p>הנתונים המשלימים מההדגמה:</p>
 <button class='cchip txt' type='button' data-copy='היקף צוואר: 43.5 ס"מ | AST: 38 U/L | ALT: 52 U/L | טסיות: 210,000 / µL | גלוקוז בצום: 108 mg/dL | HDL: 38 mg/dL | eGFR: 88 mL/min/1.73m² | UACR: 45 mg/g' aria-label='העתקת המידע המשלים'><svg class='ci' viewBox='0 0 24 24' width='20' height='20' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect x='9' y='9' width='12' height='12' rx='2'/><path d='M5 15V5a2 2 0 0 1 2-2h10'/></svg><span class='cl'>העתקת המידע המשלים</span></button>
 </div>
+<a class='zoom shotw' href='assets/demo/d4-fib4.webp' aria-label='הגדלת תמונה: חישוב FIB-4'><img src='assets/demo/d4-fib4.webp' alt='חישוב FIB-4 של 1.33, סיכון ביניים לפיברוזיס מתקדם' width='1349' height='900' loading='lazy'></a></div></li>
+<li><i>6</i><div><h3>מקורות ושאלות המשך</h3><p>כל טענה מגובה במקור, עם קישור. כל תשובה מציעה את הצעד הבא, כמו מעקב <bdi dir='ltr'>eGFR</bdi> ו-<bdi dir='ltr'>UACR</bdi> או חלופות ל-CPAP.</p>
+<a class='zoom shotw' href='assets/demo/d5-followup.webp' aria-label='הגדלת תמונה: שאלות המשך'><img src='assets/demo/d5-followup.webp' alt='שאלות המשך שהמערכת מציעה אחרי הוספת המידע' width='1310' height='410' loading='lazy'></a></div></li>
+</ol>
 </section>
 
 <section id='go' style='border-top:0;padding-top:10px'>
@@ -315,7 +405,7 @@ footer .mark img{width:130px;height:auto;display:block}
 
 <footer><div class='page'>
 <p class='credit'>האתר נוצר על ידי ד״ר רועי שליט, <a href='mailto:dr.rshalit@gmail.com'>dr.rshalit@gmail.com</a>, לצורך לימודי בלבד.</p>
-<p>עזר לימודי, לא תחליף לשיקול דעת קליני. עודכן ב-29.10.2026.</p>
+<p>עזר לימודי, לא תחליף לשיקול דעת קליני. עודכן ב-03.11.2026.</p>
 <p class='mark'><img src='assets/medacademy-wordmark.webp' alt='MedAcademy.AI' width='720' height='360' loading='lazy'><span>רפואת המחר</span></p>
 </div></footer>
 <dialog id='lb' aria-label='תמונה מוגדלת'><button type='button' id='lbx' aria-label='סגירה וחזרה לדף'>✕ סגירה</button><img alt='' src=''><p class='lbh'>לחצו בכל מקום כדי לחזור</p></dialog>
